@@ -31,4 +31,9 @@ class ProductListCreateView(mixins.ListModelMixin, mixins.CreateModelMixin, gene
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
 
+
+class ProductDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductModelSerializer
+
     
