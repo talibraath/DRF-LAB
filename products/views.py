@@ -38,6 +38,7 @@ class ProductDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductModelSerializer
 
+
 class ProductViewSet(viewsets.ViewSet):
 
     def list(self, request):
