@@ -55,6 +55,8 @@ REST_FRAMEWORK = {
         "anon": "10/min",     
         "user": "10/min",   
     },
+
+    "EXCEPTION_HANDLER": "drflab.utils.custom_exception_handler",
 }
 
 MIDDLEWARE = [
